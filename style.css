@@ -1,0 +1,43 @@
+body {
+    background-image: url('media/gggrain.svg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    color: white;
+
+    /* overflow: hidden; */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+/* MENU */
+
+
+/* MIDDLE SECTION */
+
+.moi {
+    grid-column: span 2;
+}
+
+h1 {
+    margin-inline: 25%;
+    text-align: center;
+}
+
+.moi img {
+    margin-inline: 25%;
+}
+
+/* ACCUEIL */
+
+.desc-container {
+    margin: 10%;
+    padding: 10%;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    border-radius: 10%;
+}
