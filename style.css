@@ -14,12 +14,26 @@ body {
     margin: 0;
     color: white;
 
-    /* overflow: hidden; */
     display: grid;
     grid-template-columns: repeat(4, 1fr);
 }
 
 /* MENU */
+
+nav {
+    background-color: red;
+}
+
+ul {
+    background-color: orange;
+}
+
+li {
+    list-style-type: none;
+    background-color: yellow;
+}
+
+
 
 
 /* MIDDLE SECTION */
