@@ -1,64 +1,87 @@
-/* FONTS */
-@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap'); 
-
-
-
 body {
-    background-image: url('media/gggrain.svg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    
-    height: 100vh;
-    width: 100%;
-    margin: 0;
-    color: white;
-
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+  margin: 0;
+  padding: 0;
+  background: #070712;
+  color: #cdcdcd;
+  font-family: "Avenir Next", "Avenir", sans-serif;
 }
 
-/* MENU */
-
-nav {
-    background-color: red;
+#menuToggle {
+  display: block;
+  position: relative;
+  top: 50px;
+  left: 50px;
+  z-index: 1;
+  user-select: none;
+}
+#menuToggle a {
+  text-decoration: none;
+  color: #232323;
+  transition: color 0.3s ease;
+}
+#menuToggle a:hover {
+  color: tomato;
+}
+#menuToggle input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+}
+#menuToggle input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+#menuToggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+#menuToggle input:checked ~ span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(0, -1px);
+}
+#menuToggle input:checked ~ ul {
+  transform: none;
+}
+#menuToggle span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #cdcdcd;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+}
+#menuToggle span:first-child {
+  transform-origin: 0% 0%;
+}
+#menuToggle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
 }
 
-ul {
-    background-color: orange;
+#menu {
+  position: absolute;
+  width: 300px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  background: #ededed;
+  list-style-type: none;
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+#menu li {
+  padding: 10px 0;
+  font-size: 22px;
 }
 
-li {
-    list-style-type: none;
-    background-color: yellow;
-}
-
-
-
-
-/* MIDDLE SECTION */
-
-.moi {
-    grid-column: span 2;
-}
-
-h1 {
-    margin-inline: 25%;
-    text-align: center;
-    font-family: 'Dela Gothic One', cursive;
-    text-transform: uppercase;
-}
-
-.moi img {
-    margin-inline: 25%;
-}
-
-/* ACCUEIL */
-
-.desc-container {
-    margin: 10%;
-    padding: 10%;
-    background-color: rgba(255, 255, 255, 0.2);
-    border: 2px solid rgba(255, 255, 255, 0.5);
-    border-radius: 2rem;
-}
+/*# sourceMappingURL=style.css.map */
