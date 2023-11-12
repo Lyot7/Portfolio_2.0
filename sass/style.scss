@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     background: #070712;
-    color: #cdcdcd;
+    color: #D9D9D9;
     font-family: Kanit;
 }
 
@@ -16,12 +16,6 @@ body {
 
     a {
         text-decoration: none;
-        color: #232323;
-        transition: color 0.3s ease;
-
-        &:hover {
-            color: tomato;
-        }
     }
 
     input {
@@ -36,11 +30,11 @@ body {
         z-index: 2;
 
         &:checked {
-            ~ {
+        
                 span {
                     opacity: 1;
                     transform: rotate(45deg) translate(-2px, -1px);
-                    background: #232323;
+                    background: #D9D9D9;
 
                     &:nth-last-child(3) {
                         opacity: 0;
@@ -55,7 +49,7 @@ body {
                 ul {
                     transform: none;
                 }
-            }
+            
         }
     }
 

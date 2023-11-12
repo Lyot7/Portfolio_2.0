@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   background: #070712;
-  color: #cdcdcd;
+  color: #D9D9D9;
   font-family: Kanit;
 }
 
@@ -16,11 +16,6 @@ body {
 }
 #menuToggle a {
   text-decoration: none;
-  color: #232323;
-  transition: color 0.3s ease;
-}
-#menuToggle a:hover {
-  color: tomato;
 }
 #menuToggle input {
   display: block;
@@ -33,19 +28,19 @@ body {
   opacity: 0;
   z-index: 2;
 }
-#menuToggle input:checked ~ span {
+#menuToggle input:checked span {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
-  background: #232323;
+  background: #D9D9D9;
 }
-#menuToggle input:checked ~ span:nth-last-child(3) {
+#menuToggle input:checked span:nth-last-child(3) {
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
 }
-#menuToggle input:checked ~ span:nth-last-child(2) {
+#menuToggle input:checked span:nth-last-child(2) {
   transform: rotate(-45deg) translate(0, -1px);
 }
-#menuToggle input:checked ~ ul {
+#menuToggle input:checked ul {
   transform: none;
 }
 #menuToggle span {
