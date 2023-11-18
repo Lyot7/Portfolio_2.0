@@ -1,26 +1,35 @@
 @use "elements/header.scss"; 
+$mobile: 768px;
+$tablet: 1024px;
+
+* {
+    box-sizing: border-box;
+    outline: none
+}
+
+/*SCROLL BAR*/
+::-webkit-scrollbar {
+    display: none;
+}
 
 body {
     overflow-x: hidden;
     width: 100%;
     margin: 0;
     padding: 0;
-    background: #070712;
+    background: url("../media/background/grainy-background.svg");
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
     color: #D9D9D9;
     font-family: 'Kanit', sans-serif;
-
+    
+    main {
+        section {
+            width: 500px;
+            height: 100px;
+            background-color: #D9D9D9;
+            margin: 5vh 20vh;
+        }
+    }
 };
-
-/*SCROLL BAR*/
-::-webkit-scrollbar {
-    width: 5px;
-}
-::-webkit-scrollbar-thumb {
-    background: #D9D9D9;
-    border-radius: 99px;
-}
-::-webkit-scrollbar-track {
-    background: rgba(255, 232, 201, 0)
-}
-
-
