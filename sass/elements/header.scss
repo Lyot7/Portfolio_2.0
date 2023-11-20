@@ -29,11 +29,16 @@ header {
         margin: 3rem 2rem;
         height: 2.5rem;
         width: 2.5rem;
-        opacity: 0.5;
+        opacity: 0;
         z-index: 2;
         cursor: pointer;
 
         &:checked~nav {
+            background: #D9D9D9;
+            #menu {
+                display: block;
+                transition: display 0.5s ease-in-out;
+            }
             .burger {
                 span {
                     opacity: 1;
@@ -59,18 +64,21 @@ header {
         margin: 2rem 1rem;
         border-radius: 1rem;
         width: max-content;
-        background: #D9D9D9;
+        background: rgba(0,0,0,0);
         transition: background 0.5s ease-in-out;
         top: 0;
         right: 0;
 
         #menu {
-            display: block;
-            padding: 1rem;
+            display: none;
+            padding: 3rem 2rem 0rem 2rem;
+            text-align: right;
+            margin: 0;
+            transition: display 0.5s ease-in-out;
 
             a {
-                margin: auto;
-                padding: 0 0.5rem;
+                margin: 0.5rem 0;
+                padding: 0.5rem;
                 text-decoration: none;
 
                 li {
@@ -100,8 +108,7 @@ header {
                 margin: 7px 0px;
                 position: relative;
 
-                background: #070712;
-                // background: #D9D9D9;
+                background: #D9D9D9;
                 border-radius: 5px;
 
                 z-index: 1;
@@ -110,9 +117,9 @@ header {
 
                 transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
                             background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
-                            opacity 0.55s ease,
-                            position 0.5s ease-in-out,
+                            opacity 0.5s ease,
                             left 0.5s ease-in-out;
+                            
             }
         }
     }
