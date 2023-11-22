@@ -1,0 +1,94 @@
+#home {
+    position: absolute;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    top: 5vh;
+    left: 5%;
+    width: 90%;
+    height: 90vh;
+
+    svg {
+        width: max-content;
+        height: 12rem;
+        margin: auto;
+
+        .cls-1 {
+            fill: #D9D9D9;
+            transition: fill 0.5s ease-in-out;
+        }
+    }
+
+    #welcome {
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        p {
+            color: #A0A0A0;
+            font-family: Kanit;
+            font-size: 2.5rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            margin: 0;
+        }
+
+        h1 {
+            font-family: Kanit;
+            font-size: 4rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            letter-spacing: 0.1rem;
+            margin: 1rem;
+
+            background: linear-gradient(135deg, #ACFAFF -0.31%, #FD98FF 107.28%, #F300F8 107.29%);
+            background-clip: text;
+            white-space: nowrap;
+
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        #jobs {
+            width: 30rem;
+            height: 4.5rem;
+            border-radius: 3rem;
+            background: #3B3B3B;
+            p {
+                text-align: center;
+                margin: 0;
+                height: 100%;
+                line-height: 4.5rem;
+            }
+        }
+
+        #alias {
+            margin-top: 3vh;
+            p {
+                color: #A0A0A0;
+                font-family: Kanit;
+                font-size: 1.5rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                margin: auto
+            };
+        }
+    }
+    
+    #scroll-down {
+        position: absolute;
+        bottom: 0;
+        margin: auto;
+        left: calc(50% - 2.5rem);
+
+        svg {
+            width: 5rem;
+            height: 5rem;
+            margin: auto;
+        }
+    }
+}
