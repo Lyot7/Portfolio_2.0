@@ -1,11 +1,9 @@
 #home {
-    position: absolute;
+    position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    top: 5vh;
-    left: 5%;
-    width: 90%;
-    height: 90vh;
+    margin-inline: 5%;
+    height: 100vh;
 
     svg {
         width: max-content;
@@ -81,9 +79,10 @@
     
     #scroll-down {
         position: absolute;
-        bottom: 0;
+        bottom: 5%;
         margin: auto;
         left: calc(50% - 2.5rem);
+        z-index: 10;
 
         svg {
             width: 5rem;

@@ -1,12 +1,19 @@
+//Screen sizes
 $mobile: 768px;
 $tablet: 1024px;
+
+// Colors
+$clear : #D9D9D9;
+$dark : #070712;
+$grey : #A0A0A0;
+
 @use "elements/header.scss";
 @use "elements/home.scss";
 @use "elements/about.scss";
 
 * {
     box-sizing: border-box;
-    outline: none
+    outline: none;
 }
 
 /*SCROLL BAR*/
@@ -26,16 +33,16 @@ body {
     background-size: cover;
     background-attachment: fixed;
     height: 100vh;
-    color: #D9D9D9;
+    color: $clear;
     font-family: 'Kanit', sans-serif;
 
     footer {
-        margin-top: auto;
+        position: fixed;
+        bottom: 0;
 
         p {
             margin: 1rem;
             color: #A0A0A0;
-
             font-family: Kanit;
             font-size: 1rem;
             font-style: normal;
