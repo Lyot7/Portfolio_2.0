@@ -238,6 +238,43 @@ header nav .burger span {
   margin: auto;
 }
 
+#projects {
+  position: relative;
+  display: flex;
+  margin-inline: 5%;
+  height: 100vh;
+}
+#projects #container {
+  margin: auto;
+  background-color: #D9D9D9;
+  border-radius: 3.125rem;
+  width: 100%;
+  height: 90%;
+}
+#projects #container h2 {
+  color: #070712;
+  font-family: Kanit;
+  font-size: 4rem;
+  text-align: center;
+}
+#projects #container #list {
+  background-color: rgba(255, 0, 0, 0.305);
+  height: 70%;
+  width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+#projects #container #list .project {
+  background-size: cover;
+  background-position: center;
+  margin: 10%;
+  grid-column: span 2;
+  aspect-ratio: 16/9;
+  border-radius: 1.875rem;
+  border: 10px solid rgba(0, 0, 0, 0.66);
+}
+
 * {
   box-sizing: border-box;
   outline: none;
