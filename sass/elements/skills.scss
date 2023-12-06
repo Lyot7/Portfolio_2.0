@@ -1,0 +1,33 @@
+#skills {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-inline: 5%;
+    height: 200vh;
+
+    h2 {
+        color: #D9D9D9;
+        font-family: Kanit;
+        font-size: 4rem;
+        text-align: center;
+        margin: 10vh auto;
+    }
+
+    #grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        section {
+            margin: 3rem;
+            
+            h3{
+                font-size: 2rem;
+                margin-left: 2rem;
+        }
+        }
+
+        
+
+
+    }
+}

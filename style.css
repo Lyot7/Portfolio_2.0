@@ -334,6 +334,32 @@ header nav .burger span {
   grid-column: span 3;
 }
 
+#skills {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-inline: 5%;
+  height: 200vh;
+}
+#skills h2 {
+  color: #D9D9D9;
+  font-family: Kanit;
+  font-size: 4rem;
+  text-align: center;
+  margin: 10vh auto;
+}
+#skills #grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+#skills #grid-container section {
+  margin: 3rem;
+}
+#skills #grid-container section h3 {
+  font-size: 2rem;
+  margin-left: 2rem;
+}
+
 * {
   box-sizing: border-box;
   outline: none;
