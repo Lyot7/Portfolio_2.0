@@ -20,14 +20,80 @@
         section {
             margin: 3rem;
 
-            h3{
+            h3 {
                 font-size: 2rem;
                 margin-left: 2rem;
+            }
         }
+
+        #graph-tech {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            #stack {
+                position: absolute;
+                background-color: rgba(58, 58, 58, 0.8);
+                padding: 2rem;
+                width: max-content;
+                border-radius: 50px;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 1rem;
+
+                div {
+                    border-radius: 1rem;
+                    padding: 0.5rem;
+                    display: flex;
+                    align-items: center;
+
+                    img {
+                        width: 3rem;
+                    }
+                }
+
+                #un {
+                    background: linear-gradient(223deg, rgba(255, 66, 179, 0.50) 6.71%, rgba(255, 99, 99, 0.50) 93.29%);
+                }
+
+                #deux {
+                    background: linear-gradient(225deg, rgba(255, 222, 51, 0.50) 6.79%, rgba(255, 247, 171, 0.50) 93.21%);
+                }
+
+                #trois {
+                    background: linear-gradient(220deg, #4FD -11.75%, #0267FF 99.87%);
+                }
+
+                #quatre {
+                    background: linear-gradient(225deg, rgba(183, 91, 255, 0.50) 7.85%, rgba(61, 138, 255, 0.50) 92.5%);
+                }
+
+                #cinq {
+                    background: linear-gradient(134deg, rgba(255, 99, 221, 0.50) 2.17%, rgba(255, 171, 144, 0.50) 99.34%);
+                }
+
+                #six {
+                    background: linear-gradient(225deg, rgba(252, 82, 255, 0.50) 0%, rgba(77, 255, 223, 0.50) 100%);
+                }
+
+                #sept {
+                    background: linear-gradient(135deg, rgba(162, 69, 255, 0.50) 6.06%, rgba(255, 75, 205, 0.50) 95.35%);
+                }
+
+                #huit {
+                    background: linear-gradient(223deg, rgba(255, 154, 132, 0.50) 7.94%, rgba(255, 77, 66, 0.50) 94.84%);
+                }
+
+                #neuf {
+                    background: linear-gradient(220deg, #4FD -11.75%, #0267FF 99.87%);
+                }
+
+                #background-codes {
+                    margin: auto;
+                    width: 100%;
+                }
+
+            }
         }
-
-        
-
-
     }
 }
