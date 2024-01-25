@@ -36,7 +36,7 @@ header input {
 header input:checked ~ nav {
   background: #D9D9D9;
 }
-header input:checked ~ nav #menu {
+header input:checked ~ nav .menu {
   display: block;
   transition: display 0.5s ease-in-out;
 }
@@ -63,25 +63,25 @@ header nav {
   top: 0;
   right: 0;
 }
-header nav #menu {
+header nav .menu {
   display: none;
   padding: 3rem 2rem 0rem 2rem;
   text-align: right;
   margin: 0;
   transition: display 0.5s ease-in-out;
 }
-header nav #menu a {
+header nav .menu a {
   margin: 0.5rem 0;
   padding: 0.5rem;
   text-decoration: none;
 }
-header nav #menu a li {
+header nav .menu a li {
   list-style: none;
   color: #070712;
   font-weight: 700;
   font-size: 1.5rem;
 }
-header nav #menu a:hover li {
+header nav .menu a:hover li {
   color: rgb(37, 37, 225);
   transition: color 0.5s ease-in-out;
 }
@@ -104,31 +104,65 @@ header nav .burger span {
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.5s ease, left 0.5s ease-in-out;
 }
 
-#home {
+.home {
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin-inline: 5%;
   height: 100vh;
 }
-#home svg {
+.home .moving-logo {
+  position: relative;
+  margin-left: 5rem;
+}
+.home .moving-logo svg {
+  position: absolute;
   width: max-content;
+  transition: all 0.2s ease-in-out;
+}
+.home .moving-logo svg .cls-1 {
+  stroke-width: 1.5px;
+}
+.home .moving-logo .un {
   height: 12rem;
-  margin: auto;
+  top: calc(50% - 6rem);
+  left: 6rem;
 }
-#home svg .cls-1 {
-  fill: #D9D9D9;
-  transition: fill 0.5s ease-in-out;
+.home .moving-logo .un .cls-1 {
+  fill: #d9d9d9;
 }
-#home #welcome {
+.home .moving-logo .deux {
+  height: 14rem;
+  top: calc(50% - 7rem);
+  left: 4.5rem;
+  opacity: 0.25;
+  filter: blur(2px);
+}
+.home .moving-logo .deux .cls-1 {
+  fill: rgba(217, 217, 217, 0);
+  stroke: #d9d9d9;
+}
+.home .moving-logo .trois {
+  height: 16rem;
+  top: calc(50% - 8rem);
+  left: 3rem;
+  opacity: 0.2;
+  filter: blur(4px);
+}
+.home .moving-logo .trois .cls-1 {
+  fill: rgba(217, 217, 217, 0);
+  stroke: #d9d9d9;
+}
+.home .welcome {
   margin: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  animation: scroll 5s ease-in-out infinite;
 }
-#home #welcome p {
-  color: #A0A0A0;
+.home .welcome p {
+  color: #a0a0a0;
   font-family: Kanit;
   font-size: 2.5rem;
   font-style: normal;
@@ -136,7 +170,7 @@ header nav .burger span {
   line-height: normal;
   margin: 0;
 }
-#home #welcome h1 {
+.home .welcome h1 {
   font-family: Kanit;
   font-size: 4rem;
   font-style: normal;
@@ -144,29 +178,29 @@ header nav .burger span {
   line-height: normal;
   letter-spacing: 0.1rem;
   margin: 1rem;
-  background: linear-gradient(135deg, #ACFAFF -0.31%, #FD98FF 107.28%, #F300F8 107.29%);
+  background: linear-gradient(135deg, #acfaff -0.31%, #fd98ff 107.28%, #f300f8 107.29%);
   background-clip: text;
   white-space: nowrap;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-#home #welcome #jobs {
+.home .welcome .jobs {
   width: 30rem;
   height: 4.5rem;
   border-radius: 3rem;
-  background: #3B3B3B;
+  background: #3b3b3b;
 }
-#home #welcome #jobs p {
+.home .welcome .jobs p {
   text-align: center;
   margin: 0;
   height: 100%;
   line-height: 4.5rem;
 }
-#home #welcome #alias {
+.home .welcome .alias {
   margin-top: 3vh;
 }
-#home #welcome #alias p {
-  color: #A0A0A0;
+.home .welcome .alias p {
+  color: #a0a0a0;
   font-family: Kanit;
   font-size: 1.5rem;
   font-style: normal;
@@ -174,77 +208,86 @@ header nav .burger span {
   line-height: normal;
   margin: auto;
 }
-#home #scroll-down {
+.home .scroll-down {
   position: absolute;
   bottom: 5%;
   margin: auto;
   left: calc(50% - 2.5rem);
   z-index: 10;
+  animation: scroll 3s ease-in-out infinite;
 }
-#home #scroll-down svg {
+.home .scroll-down svg {
   width: 5rem;
   height: 5rem;
   margin: auto;
 }
 
-#about {
+@keyframes scroll {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.about {
   position: relative;
   margin-inline: 5%;
   height: 100vh;
 }
-#about h2 {
+.about h2 {
   position: relative;
   margin: 0;
   padding-top: 15vh;
   height: 5vh;
   text-align: center;
-  color: #D9D9D9;
+  color: #d9d9d9;
   font-family: Kanit;
   font-size: 4rem;
 }
-#about #container {
+.about .container {
   margin-top: 10vh;
   height: 70vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-#about #container #desc {
+.about .container .desc {
   display: flex;
   flex-direction: column;
   place-items: center;
   width: 90%;
   margin: auto;
 }
-#about #container #desc p {
-  color: #D9D9D9;
+.about .container .desc p {
+  color: #d9d9d9;
   font-family: Kanit;
   font-size: 1.5rem;
 }
-#about #container #desc #buttons {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  width: 90%;
+.about .container img {
   margin: auto;
+  width: 50%;
+  object-fit: cover;
+  animation: borderRadius 2s ease-in-out infinite alternate;
 }
-#about #container #desc #buttons a svg {
-  width: 4rem;
-  height: 4rem;
-  margin: 0.5rem;
-  fill: #D9D9D9;
-  transition: fill 0.5s ease-in-out;
-}
-#about #container #photo {
-  margin: auto;
+@keyframes borderRadius {
+  0% {
+    border-radius: 70% 30% 25% 75%/55% 40% 60% 45%;
+  }
+  100% {
+    border-radius: 30% 70% 70% 30%/60% 45% 55% 40%;
+  }
 }
 
-#projects {
+.projects {
   position: relative;
   display: flex;
   margin-inline: 5%;
   height: 100vh;
 }
-#projects #container {
+.projects .container {
   margin: auto;
   background: rgba(94, 69, 192, 0.23);
   border-radius: 1rem;
@@ -256,43 +299,44 @@ header nav .burger span {
   width: 100%;
   height: 90%;
 }
-#projects #container h2 {
+.projects .container h2 {
   color: #D9D9D9;
   font-family: Kanit;
   font-size: 4rem;
   text-align: center;
 }
-#projects #container #list {
+.projects .container .list {
   height: 70%;
   width: 90%;
   margin: auto;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
 }
-#projects #container #list .project {
+.projects .container .list .project {
   margin: auto;
   grid-column: span 2;
   aspect-ratio: 16/9;
   border-radius: 1.875rem;
-  width: 300px;
+  width: 20vw;
   position: relative;
 }
-#projects #container #list .project a {
+.projects .container .list .project a {
   position: relative;
   display: block;
   height: 100%;
+  margin-top: 0%;
 }
-#projects #container #list .project a #project-image {
+.projects .container .list .project a .project-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border: 10px solid rgba(0, 0, 0, 0.66);
   border-radius: 1.875rem;
 }
-#projects #container #list .project a #hover {
+.projects .container .list .project a .hover {
   display: none;
 }
-#projects #container #list .project a:hover #hover {
+.projects .container .list .project a:hover .hover {
   display: block;
   position: absolute;
   top: 0;
@@ -301,70 +345,70 @@ header nav .burger span {
   border-radius: 1.875rem;
   background: rgba(0, 0, 0, 0.66);
 }
-#projects #container #list .project a:hover #hover #infos {
+.projects .container .list .project a:hover .hover .infos {
   margin: 1rem 1rem 0 1rem;
   display: flex;
 }
-#projects #container #list .project a:hover #hover #infos #icons {
+.projects .container .list .project a:hover .hover .infos .icons {
   display: flex;
   height: 2rem;
 }
-#projects #container #list .project a:hover #hover #infos #icons img {
+.projects .container .list .project a:hover .hover .infos .icons img {
   height: 1.5rem;
   padding: 0 0.25rem;
 }
-#projects #container #list .project a:hover #hover #infos #date {
+.projects .container .list .project a:hover .hover .infos .date {
   margin: auto 0 auto auto;
   color: #D9D9D9;
   padding: 0.25rem 0.5rem;
   background-color: rgba(0, 0, 0, 0.66);
   border-radius: 1rem;
 }
-#projects #container #list .project a:hover #hover #desc {
+.projects .container .list .project a:hover .hover .desc {
   padding: 0 2rem;
   color: #D9D9D9;
 }
-#projects #container #list .project p {
+.projects .container .list .project p {
   text-align: center;
 }
-#projects #container #list .project:nth-child(2) {
+.projects .container .list .project:nth-child(2) {
   margin-bottom: 0%;
 }
-#projects #container #list .project:nth-child(n+4) {
+.projects .container .list .project:nth-child(n+4) {
   grid-column: span 3;
 }
 
-#skills {
+.skills {
   position: relative;
   display: flex;
   flex-direction: column;
   margin-inline: 5%;
   height: max-content;
 }
-#skills h2 {
+.skills h2 {
   color: #D9D9D9;
   font-family: Kanit;
   font-size: 4rem;
   text-align: center;
   margin: 10vh auto;
 }
-#skills #grid-container {
+.skills .grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-#skills #grid-container section {
+.skills .grid-container section {
   margin: 3rem;
 }
-#skills #grid-container section h3 {
+.skills .grid-container section h3 {
   font-size: 2rem;
   margin-left: 2rem;
 }
-#skills #grid-container #graph-tech {
+.skills .grid-container .graph-tech {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-#skills #grid-container #graph-tech #stack {
+.skills .grid-container .graph-tech .stack {
   position: absolute;
   background-color: rgba(58, 58, 58, 0.8);
   padding: 2rem;
@@ -374,78 +418,101 @@ header nav .burger span {
   grid-template-columns: 1fr 1fr 1fr;
   gap: 1rem;
 }
-#skills #grid-container #graph-tech #stack div {
+.skills .grid-container .graph-tech .stack div {
   border-radius: 1rem;
   padding: 0.5rem;
   display: flex;
   align-items: center;
 }
-#skills #grid-container #graph-tech #stack div img {
+.skills .grid-container .graph-tech .stack div img {
   width: 3rem;
 }
-#skills #grid-container #graph-tech #stack #un {
+.skills .grid-container .graph-tech .stack div:nth-child(1) {
   background: linear-gradient(223deg, rgba(255, 66, 179, 0.5) 6.71%, rgba(255, 99, 99, 0.5) 93.29%);
 }
-#skills #grid-container #graph-tech #stack #deux {
+.skills .grid-container .graph-tech .stack div:nth-child(2) {
   background: linear-gradient(225deg, rgba(255, 222, 51, 0.5) 6.79%, rgba(255, 247, 171, 0.5) 93.21%);
 }
-#skills #grid-container #graph-tech #stack #trois {
+.skills .grid-container .graph-tech .stack div:nth-child(3) {
   background: linear-gradient(220deg, #4FD -11.75%, #0267FF 99.87%);
 }
-#skills #grid-container #graph-tech #stack #quatre {
+.skills .grid-container .graph-tech .stack div:nth-child(4) {
   background: linear-gradient(225deg, rgba(183, 91, 255, 0.5) 7.85%, rgba(61, 138, 255, 0.5) 92.5%);
 }
-#skills #grid-container #graph-tech #stack #cinq {
+.skills .grid-container .graph-tech .stack div:nth-child(5) {
   background: linear-gradient(134deg, rgba(255, 99, 221, 0.5) 2.17%, rgba(255, 171, 144, 0.5) 99.34%);
 }
-#skills #grid-container #graph-tech #stack #six {
+.skills .grid-container .graph-tech .stack div:nth-child(6) {
   background: linear-gradient(225deg, rgba(252, 82, 255, 0.5) 0%, rgba(77, 255, 223, 0.5) 100%);
 }
-#skills #grid-container #graph-tech #stack #sept {
+.skills .grid-container .graph-tech .stack div:nth-child(7) {
   background: linear-gradient(135deg, rgba(162, 69, 255, 0.5) 6.06%, rgba(255, 75, 205, 0.5) 95.35%);
 }
-#skills #grid-container #graph-tech #stack #huit {
+.skills .grid-container .graph-tech .stack div:nth-child(8) {
   background: linear-gradient(223deg, rgba(255, 154, 132, 0.5) 7.94%, rgba(255, 77, 66, 0.5) 94.84%);
 }
-#skills #grid-container #graph-tech #stack #neuf {
+.skills .grid-container .graph-tech .stack div:nth-child(9) {
   background: linear-gradient(220deg, #4FD -11.75%, #0267FF 99.87%);
 }
-#skills #grid-container #graph-tech #stack #background-codes {
+.skills .grid-container .graph-tech .stack .background-codes {
   margin: auto;
   width: 100%;
 }
+.skills .grid-container .graph-design {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  height: 100%;
+  margin: auto;
+}
+.skills .grid-container .graph-design img {
+  position: absolute;
+  width: 250px;
+}
+.skills .grid-container .graph-design .gemusic {
+  left: 20%;
+  top: 0;
+}
+.skills .grid-container .graph-design .brain-advisor {
+  right: 0;
+  top: 30%;
+}
+.skills .grid-container .graph-design .hit-the-road {
+  left: 0;
+  top: 50%;
+}
 
-#contact {
+.contact {
   position: relative;
   display: flex;
   flex-direction: column;
   margin-inline: 5%;
   height: 100vh;
 }
-#contact h2 {
+.contact h2 {
   color: #D9D9D9;
   font-family: Kanit;
   font-size: 4rem;
   text-align: center;
   margin: 10vh auto 0 auto;
 }
-#contact div {
+.contact div {
   margin: auto;
   position: relative;
   font-weight: 700;
   font-size: 4rem;
   width: 500px;
 }
-#contact div p {
+.contact div p {
   margin: 0 auto;
 }
-#contact div strong {
+.contact div strong {
   background: linear-gradient(90deg, #ACFAFF -2.38%, #F300F8 98.6%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-#contact div #logo {
+.contact div .logo {
   position: absolute;
   top: 40px;
   transform: rotate(20deg);
@@ -458,24 +525,24 @@ header nav .burger span {
   backdrop-filter: blur(3px);
   background-color: rgba(96, 96, 96, 0.5);
 }
-#contact div #logo img {
+.contact div .logo img {
   padding: 1.5rem;
   object-fit: contain;
   max-width: 100%;
 }
-#contact div #links {
+.contact div .links {
   margin-top: 2rem;
   display: flex;
   justify-content: space-between;
 }
-#contact div #links a {
+.contact div .links a {
   height: 100px;
   transition: transform 0.25s ease-in-out;
 }
-#contact div #links a img {
+.contact div .links a img {
   height: 100%;
 }
-#contact div #links a:hover {
+.contact div .links a:hover {
   transform: scale(1.2);
 }
 
@@ -501,8 +568,8 @@ body {
   background: url("../media/background/grainy-background.svg");
   background-size: cover;
   background-attachment: fixed;
-  height: 100vh;
-  color: #D9D9D9;
+  min-height: 100vh;
+  color: #d9d9d9;
   font-family: "Kanit", sans-serif;
 }
 body footer {
@@ -511,7 +578,7 @@ body footer {
 }
 body footer p {
   margin: 1rem;
-  color: #A0A0A0;
+  color: #a0a0a0;
   font-family: Kanit;
   font-size: 1rem;
   font-style: normal;

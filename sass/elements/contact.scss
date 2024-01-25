@@ -1,4 +1,4 @@
-#contact {
+.contact {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -31,7 +31,7 @@
             -webkit-text-fill-color: transparent;
         }
 
-        #logo {
+        .logo {
             position: absolute;
             top: 40px;
             transform: rotate(20deg);
@@ -52,7 +52,7 @@
             }
         }
 
-        #links {
+        .links {
             margin-top: 2rem;
             display: flex;
             justify-content: space-between;

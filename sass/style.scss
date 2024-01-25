@@ -3,9 +3,9 @@ $mobile: 768px;
 $tablet: 1024px;
 
 // Colors
-$clear : #D9D9D9;
-$dark : #070712;
-$grey : #A0A0A0;
+$clear: #d9d9d9;
+$dark: #070712;
+$grey: #a0a0a0;
 
 @use "elements/header.scss";
 @use "elements/home.scss";
@@ -15,43 +15,43 @@ $grey : #A0A0A0;
 @use "elements/contact.scss";
 
 * {
-    box-sizing: border-box;
-    outline: none;
-    scroll-behavior: smooth;
+  box-sizing: border-box;
+  outline: none;
+  scroll-behavior: smooth;
 }
 
 /*SCROLL BAR*/
 ::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    overflow-x: hidden;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    background: url("../media/background/grainy-background.svg");
-    background-size: cover;
-    background-attachment: fixed;
-    height: 100vh;
-    color: $clear;
-    font-family: 'Kanit', sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: url("../media/background/grainy-background.svg");
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100vh;
+  color: $clear;
+  font-family: "Kanit", sans-serif;
 
-    footer {
-        position: fixed;
-        bottom: 0;
+  footer {
+    position: fixed;
+    bottom: 0;
 
-        p {
-            margin: 1rem;
-            color: #A0A0A0;
-            font-family: Kanit;
-            font-size: 1rem;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;
-        }
+    p {
+      margin: 1rem;
+      color: #a0a0a0;
+      font-family: Kanit;
+      font-size: 1rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
     }
+  }
 }
