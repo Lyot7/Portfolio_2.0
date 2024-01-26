@@ -27,9 +27,3 @@
     @content;
   }
 }
-
-@mixin breakpoint($bp) {
-  @media (max-width: $bp) {
-    @content;
-  }
-}

@@ -320,7 +320,6 @@ header nav .burger span {
 .about {
   position: relative;
   margin-inline: 5%;
-  height: 100vh;
 }
 .about h2 {
   position: relative;
@@ -332,11 +331,20 @@ header nav .burger span {
   font-family: Kanit;
   font-size: 4rem;
 }
+@media (max-width: 960px) {
+  .about h2 {
+    font-size: 3rem;
+  }
+}
 .about .container {
   margin-top: 10vh;
-  height: 70vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
+}
+@media (max-width: 960px) {
+  .about .container {
+    grid-template-columns: 1fr;
+  }
 }
 .about .container .desc {
   display: flex;
@@ -350,11 +358,31 @@ header nav .burger span {
   font-family: Kanit;
   font-size: 1.5rem;
 }
+@media (max-width: 960px) {
+  .about .container .desc p {
+    font-size: 1.2rem;
+  }
+}
 .about .container img {
   margin: auto;
   width: 50%;
   object-fit: cover;
   animation: borderRadius 2s ease-in-out infinite alternate;
+}
+@media (max-width: 960px) {
+  .about .container img {
+    width: 30%;
+  }
+}
+@media (max-width: 720px) {
+  .about .container img {
+    width: 40%;
+  }
+}
+@media (max-width: 480px) {
+  .about .container img {
+    width: 50%;
+  }
 }
 @keyframes borderRadius {
   0% {

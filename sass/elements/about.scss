@@ -1,7 +1,6 @@
 .about {
   position: relative;
   margin-inline: 5%;
-  height: 100vh;
 
   h2 {
     position: relative;
@@ -12,13 +11,20 @@
     color: #d9d9d9;
     font-family: Kanit;
     font-size: 4rem;
+
+    @include lg {
+      font-size: 3rem;
+    }
   }
 
   .container {
     margin-top: 10vh;
-    height: 70vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
+
+    @include lg {
+      grid-template-columns: 1fr;
+    }
 
     .desc {
       display: flex;
@@ -31,6 +37,10 @@
         color: #d9d9d9;
         font-family: Kanit;
         font-size: 1.5rem;
+
+        @include lg {
+          font-size: 1.2rem;
+        }
       }
     }
 
@@ -39,6 +49,18 @@
       width: 50%;
       object-fit: cover;
       animation: borderRadius 2s ease-in-out infinite alternate;
+
+      @include lg {
+        width: 30%;
+      }
+
+      @include md {
+        width: 40%;
+      }
+
+      @include sm {
+        width: 50%;
+      }
 
       @keyframes borderRadius {
         0% {
