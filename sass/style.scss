@@ -1,18 +1,13 @@
-//Screen sizes
-$mobile: 768px;
-$tablet: 1024px;
+@import "variables";
+@import "mixins";
+@import "placeholders";
 
-// Colors
-$clear: #d9d9d9;
-$dark: #070712;
-$grey: #a0a0a0;
-
-@use "elements/header.scss";
-@use "elements/home.scss";
-@use "elements/about.scss";
-@use "elements/projects.scss";
-@use "elements/skills.scss";
-@use "elements/contact.scss";
+@import "elements/header.scss";
+@import "elements/home.scss";
+@import "elements/about.scss";
+@import "elements/projects.scss";
+@import "elements/skills.scss";
+@import "elements/contact.scss";
 
 * {
   box-sizing: border-box;
@@ -28,7 +23,6 @@ $grey: #a0a0a0;
 body {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
   overflow-x: hidden;
   width: 100%;
   margin: 0;

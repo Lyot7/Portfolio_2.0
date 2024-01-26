@@ -109,16 +109,41 @@ header nav .burger span {
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin-inline: 5%;
-  height: 100vh;
+  min-height: 100vh;
+}
+@media (max-width: 1200px) {
+  .home {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr;
+  }
 }
 .home .moving-logo {
   position: relative;
   margin-left: 5rem;
 }
+@media (max-width: 1200px) {
+  .home .moving-logo {
+    width: 50%;
+    height: 80%;
+    margin: 7rem auto auto auto;
+  }
+}
+@media (max-width: 480px) {
+  .home .moving-logo {
+    width: 80%;
+    height: 80%;
+    margin: 8rem auto auto auto;
+  }
+}
 .home .moving-logo svg {
   position: absolute;
   width: max-content;
   transition: all 0.2s ease-in-out;
+}
+@media (max-width: 1200px) {
+  .home .moving-logo svg {
+    left: 0 !important;
+  }
 }
 .home .moving-logo svg .cls-1 {
   stroke-width: 1.5px;
@@ -127,6 +152,12 @@ header nav .burger span {
   height: 12rem;
   top: calc(50% - 6rem);
   left: 6rem;
+}
+@media (max-width: 1200px) {
+  .home .moving-logo .un {
+    width: 80%;
+    margin-left: 10%;
+  }
 }
 .home .moving-logo .un .cls-1 {
   fill: #d9d9d9;
@@ -138,6 +169,14 @@ header nav .burger span {
   opacity: 0.25;
   filter: blur(2px);
 }
+@media (max-width: 1200px) {
+  .home .moving-logo .deux {
+    right: 2rem;
+    left: 0;
+    width: 90%;
+    margin-left: 5%;
+  }
+}
 .home .moving-logo .deux .cls-1 {
   fill: rgba(217, 217, 217, 0);
   stroke: #d9d9d9;
@@ -148,6 +187,11 @@ header nav .burger span {
   left: 3rem;
   opacity: 0.2;
   filter: blur(4px);
+}
+@media (max-width: 1200px) {
+  .home .moving-logo .trois {
+    width: 100%;
+  }
 }
 .home .moving-logo .trois .cls-1 {
   fill: rgba(217, 217, 217, 0);
@@ -161,6 +205,11 @@ header nav .burger span {
   align-items: center;
   animation: scroll 5s ease-in-out infinite;
 }
+@media (max-width: 1200px) {
+  .home .welcome {
+    margin-bottom: 12rem;
+  }
+}
 .home .welcome p {
   color: #a0a0a0;
   font-family: Kanit;
@@ -169,6 +218,16 @@ header nav .burger span {
   font-weight: 400;
   line-height: normal;
   margin: 0;
+}
+@media (max-width: 960px) {
+  .home .welcome p {
+    font-size: 1.75rem;
+  }
+}
+@media (max-width: 480px) {
+  .home .welcome p {
+    font-size: 1.25rem;
+  }
 }
 .home .welcome h1 {
   font-family: Kanit;
@@ -184,17 +243,37 @@ header nav .burger span {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+@media (max-width: 960px) {
+  .home .welcome h1 {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 480px) {
+  .home .welcome h1 {
+    font-size: 2rem;
+  }
+}
 .home .welcome .jobs {
   width: 30rem;
   height: 4.5rem;
   border-radius: 3rem;
   background: #3b3b3b;
 }
+@media (max-width: 960px) {
+  .home .welcome .jobs {
+    width: 20rem;
+  }
+}
 .home .welcome .jobs p {
   text-align: center;
   margin: 0;
   height: 100%;
   line-height: 4.5rem;
+}
+@media (max-width: 960px) {
+  .home .welcome .jobs p {
+    font-size: 1.5rem;
+  }
 }
 .home .welcome .alias {
   margin-top: 3vh;
@@ -208,13 +287,18 @@ header nav .burger span {
   line-height: normal;
   margin: auto;
 }
+@media (max-width: 960px) {
+  .home .welcome .alias p {
+    font-size: 1.5rem;
+  }
+}
 .home .scroll-down {
   position: absolute;
   bottom: 5%;
   margin: auto;
   left: calc(50% - 2.5rem);
   z-index: 10;
-  animation: scroll 3s ease-in-out infinite;
+  animation: scroll 2.5s ease-in-out infinite;
 }
 .home .scroll-down svg {
   width: 5rem;
@@ -560,7 +644,6 @@ header nav .burger span {
 body {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
   overflow-x: hidden;
   width: 100%;
   margin: 0;

@@ -3,15 +3,37 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin-inline: 5%;
-  height: 100vh;
+  min-height: 100vh;
+
+  @include xl {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr;
+  }
 
   .moving-logo {
     position: relative;
     margin-left: 5rem;
+
+    @include xl {
+      width: 50%;
+      height: 80%;
+      margin: 7rem auto auto auto;
+    }
+
+    @include sm {
+      width: 80%;
+      height: 80%;
+      margin: 8rem auto auto auto;
+    }
+
     svg {
       position: absolute;
       width: max-content;
       transition: all 0.2s ease-in-out;
+
+      @include xl {
+        left: 0 !important;
+      }
 
       .cls-1 {
         stroke-width: 1.5px;
@@ -22,6 +44,11 @@
       height: 12rem;
       top: calc(50% - 6rem);
       left: 6rem;
+
+      @include xl {
+        width: 80%;
+        margin-left: 10%;
+      }
 
       .cls-1 {
         fill: #d9d9d9;
@@ -35,6 +62,13 @@
       opacity: 0.25;
       filter: blur(2px);
 
+      @include xl {
+        right: 2rem;
+        left: 0;
+        width: 90%;
+        margin-left: 5%;
+      }
+
       .cls-1 {
         fill: #d9d9d900;
         stroke: #d9d9d9;
@@ -47,6 +81,10 @@
       left: 3rem;
       opacity: 0.2;
       filter: blur(4px);
+
+      @include xl {
+        width: 100%;
+      }
 
       .cls-1 {
         fill: #d9d9d900;
@@ -63,6 +101,10 @@
     align-items: center;
     animation: scroll 5s ease-in-out infinite;
 
+    @include xl {
+      margin-bottom: 12rem;
+    }
+
     p {
       color: #a0a0a0;
       font-family: Kanit;
@@ -71,6 +113,14 @@
       font-weight: 400;
       line-height: normal;
       margin: 0;
+
+      @include lg {
+        font-size: 1.75rem;
+      }
+
+      @include sm {
+        font-size: 1.25rem;
+      }
     }
 
     h1 {
@@ -81,7 +131,6 @@
       line-height: normal;
       letter-spacing: 0.1rem;
       margin: 1rem;
-
       background: linear-gradient(
         135deg,
         #acfaff -0.31%,
@@ -93,6 +142,14 @@
 
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+
+      @include lg {
+        font-size: 3rem;
+      }
+
+      @include sm {
+        font-size: 2rem;
+      }
     }
 
     .jobs {
@@ -100,11 +157,20 @@
       height: 4.5rem;
       border-radius: 3rem;
       background: #3b3b3b;
+
+      @include lg {
+        width: 20rem;
+      }
+
       p {
         text-align: center;
         margin: 0;
         height: 100%;
         line-height: 4.5rem;
+
+        @include lg {
+          font-size: 1.5rem;
+        }
       }
     }
 
@@ -118,6 +184,10 @@
         font-weight: 400;
         line-height: normal;
         margin: auto;
+
+        @include lg {
+          font-size: 1.5rem;
+        }
       }
     }
   }
@@ -128,7 +198,7 @@
     margin: auto;
     left: calc(50% - 2.5rem);
     z-index: 10;
-    animation: scroll 3s ease-in-out infinite;
+    animation: scroll 2.5s ease-in-out infinite;
 
     svg {
       width: 5rem;
